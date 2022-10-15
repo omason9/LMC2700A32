@@ -23,7 +23,6 @@ let printMovies = () => {
         console.log("Title: " + allMovies[i].title);
         console.log("Rating: " + allMovies[i].rating);
         console.log("Watched: " + allMovies[i].haveWatched);
-        console.log();
     }
     console.log(allMovies.length);
 }
@@ -37,7 +36,6 @@ let highRatings = (rating) => {
             console.log("Title: " + allMovies[i].title);
             console.log("Rating: " + allMovies[i].rating);
             console.log("Watched: " + allMovies[i].haveWatched);
-            console.log();
         }
     }
 }
