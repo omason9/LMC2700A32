@@ -23,6 +23,7 @@ let printMovies = () => {
         console.log("Title: " + allMovies[i].title);
         console.log("Rating: " + allMovies[i].rating);
         console.log("Watched: " + allMovies[i].haveWatched);
+        console.log();
     }
     console.log(allMovies.length);
 }
@@ -36,6 +37,7 @@ let highRatings = (rating) => {
             console.log("Title: " + allMovies[i].title);
             console.log("Rating: " + allMovies[i].rating);
             console.log("Watched: " + allMovies[i].haveWatched);
+            console.log();
         }
     }
 }
@@ -46,9 +48,9 @@ let changeWatched = (title) => {
     for (i = 0; i < allMovies.length; i = i + 1) {
         if (allMovies[i].title === title) {
             if (allMovies[i].haveWatched == true) {
-                allMovies[i] = new Movie (allMovies[i].title, allMovies[i].rating, false);  
+                allMovies[i].haveWatched = false;
             } else {
-                allMovies[i] = new Movie (allMovies[i].title, allMovies[i].rating, true);
+                allMovies[i].haveWatched = true;
             }    
         }
     }
