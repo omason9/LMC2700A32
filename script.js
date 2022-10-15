@@ -7,11 +7,20 @@ class Movie {
         this.rating = rating;
         this.haveWatched = haveWatched;
     }
+    
+    changeHaveWatched() {
+        console.log("also working");
+        if (this.haveWatched == true) {
+            this.haveWatched = false;   
+        } else {
+            this.haveWatched = true;   
+        }    
+    }    
 }
 
 //add a movie OBJECT to the allMovies array
 let addMovie = (movie) => {
-    allMovies[allMovies.length - 1] = movie;
+    allMovies[allMovies.length] = movie;
 }
 
 //iterate through all elements of allMovies array
@@ -39,12 +48,10 @@ let highRatings = (rating) => {
 //Toggle the 'haveWatched' property of the specified movie 
 let changeWatched = (title) => {
     for (i = 0; i < allMovies.length; i = i + 1) {
-        if (allMovies[i].title == title) {
-            if (allMovies[i].haveWatched) {
-                allMovies[i].haveWatched = false;
-            } else {
-                allMovies[i].haveWatched = true;
-            }
+        if (allMovies[i].title === title) {
+            allMovies[i] = new Movie(allMovies[i].title, allMovies[i].rating, false);
+            console.log("working");
+            console.log(allMovies[i]);
         }
     }
 }
